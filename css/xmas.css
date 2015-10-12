@@ -1,0 +1,76 @@
+﻿body
+{font-family:"Comic Sans MS",cursive, Arial, Helvetica;
+padding-left:4px;
+background-color:#111;
+color:white;
+padding-right:4px}
+.menupos
+ {position:absolute;
+ left:20px;
+ top:130px;}
+.menu
+{radius:4px;
+ width:90px;
+border-radius: 4px;
+-moz-border-radius:4px; 
+-webkit-border-radius:4px;
+background-color:#ccc;
+background: -webkit-gradient(linear, 0 0, 0 100%, from(#bbb ), to(  #ccc));
+margin-bottom:4px;
+padding-bottom:3px;
+padding-left:6px;
+padding-right:6px;
+padding-top:2px; 
+line-height:20px; }
+.menu a
+{color:#111;
+font-size:13px;
+font-family:"Comic Sans MS", cursive;
+font-weight:400;
+text-decoration:none;}
+.menu a:hover
+{text-decoration:underline;}
+h1
+{position:absolute;
+top:0;
+left:300px;
+font-family: 'Pacifico',"Comic Sans MS",cursive, Arial, Helvetica;
+font-size:24pt;
+padding-top:0;
+margin-top:6px;}
+h2
+{position:absolute;
+top:50px;
+left:350px;
+font-size:18pt;
+font-family:'Pacifico', "Comic Sans MS",cursive, Arial, Helvetica;}
+.h2digits
+{font-size:24pt;}
+.mainbit
+{position:absolute;
+top:128px;
+left:170px;
+right:4px}
+.mainbit a 
+{text-decoration:none;} 
+.mainbit a:hover
+{text-decoration:underline;} 
+.pic
+{padding-left:6px;
+padding-right:6px;}
+.logo
+{position:absolute;
+left:4px;
+top:6px;}
+ul
+{padding-top:0;
+margin-top:4px;
+padding-left:16px;
+margin-left:16px;}
+li
+{padding-bottom:5px;
+margin-bottom:5px;}
+.logo-right
+{position:absolute;
+right:4px;
+top:6px;}

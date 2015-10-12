@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>oxo</title>
+<script language="javascript" src="http://www.chorltonlittlegems.co.uk/oxo/js/lib/jquery-1.10.1.min.js"/></script>
+</head>
+
+<body style="font-family:Arial, Helvetica, sans-serif">
+<h1>oxo2 v2</h1>
+<script>
+var line_to_cell_2d = new Array(9);
+var cell_to_line_2d = new Array(9);
+var gm_2d 			= new Array(3);
+var target_2d		= new Array(3,30,2,20,1,10,0);
+var status_2d		= 0;
+var youPlay         = "X";
+var computerPlays   = "0";
+var computerStarts  = true;
+var computerPlaysNext=true;
+var whoHasWon		= "#";
+ 
+$(document).ready(function(){
+   $('#screen2').hide();  
+   $('#screen1').show();  
+
+}); 
+
+function oxo2() 
+{ 
+	var i=0, j=0, k=0,z=0,ok = false;
+ 
+	for (i=0;i<8;i++)
+	{
+		line_to_cell_2d[i]=Array(0,0,0);
+	}
+	for (j=0;j<3;j++)
+	{
+		for (i=0;i<3;i++)
+		{
+			line_to_cell_2d[j][i]  = (i*3)+j;
+			line_to_cell_2d[j+3][i]= (j*3)+i;
+	 	}
+ 		line_to_cell_2d[6][j] = 2+ (j*2);
+	 	line_to_cell_2d[7][j]  = 4*j;
+	}
+
+	for (j=0;j<9;j++)
+	{
+   		cell_to_line_2d[j] = Array(-1,-1,-1,-1);
+	}
+	for (j=0;j<8;j++)
+	{
+ 		for (i=0; i<3; i++)
+		{
+			k = line_to_cell_2d[j][i];
+			ok = false;
+			
+			for (z=0;!ok; z++)
+			{
+		 		if (cell_to_line_2d[k][z] ==-1)
+		 		{
+					 ok=true;
+		 			 cell_to_line_2d[k][z]=j;
+		 		}
+			} 
+		}
+	}
+
+gm_2d[0]=Array(0,0,0);
+gm_2d[1]=Array(0,0,0);
+gm_2d[2]=Array(0,0,0);
+$('#screen1').hide();  
+$('#screen2').show();  
+}
+
+function XorO()
+{	
+	var coin=true;
+	coin=(Math.random(1)>0.5);
+	if (coin)
+	{
+		youPlay="0";
+		computerPlays="X";
+	}
+	else
+	{
+		youPlay="X";
+		computerPlays="0";
+	}
+     return youPlay;
+}
+
+function whoStarts()
+{
+	computerStarts     = (Math.random(1)>0.5);
+	compauterPlaysNext = computerStarts;
+	return	computerStarts;
+}
+
+function drawBox(i,j,who)
+{
+	var a = gm_2d[i][j], msg="";
+	switch(a)
+	{
+		case 0:
+		if (who=="C")
+		{
+			msg+="&nbsp;&nbsp;&nbsp;&nbsp;";
+		}
+		else
+		{
+			msg+="&nbsp;<input type='button' height='20' onclick='youMove("+i+","+j + ")'  >&nbsp;</button>";
+		}
+		break;
+		
+		case 1:
+		msg+=youPlay;
+		break;
+		
+		case 10:
+		msg += computerPlays;
+		break;
+		
+		default:
+   	    msg+="*";
+	}
+	console.log(msg);
+return msg;	
+}
+
+function draw2d(who)
+{
+	var msg="<table>";
+	msg+="<tr><th id='c1'>"+drawBox( 0,0,who)+"</th><th>|</th><th>"+drawBox(0,1,who)+"</th><th>|</th><th>"+drawBox(0,2,who)+"</th></tr>";
+	msg+="<tr><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th></tr>";
+ 	msg+="<tr><th>"+drawBox(1,0,who)+"</th><th>|</th><th>"+drawBox(1,1,who)+"</th><th>|</th><th>"+drawBox(1,2,who)+"</th></tr>";
+	msg+="<tr><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th></tr>";
+	msg+="<tr><th>"+drawBox(2,0,who)+"</th><th>|</th><th>"+drawBox(2,1,who)+"</th><th>|</th><th>"+drawBox(2,2,who)+"</th></tr>";
+	msg+="</table>";
+	$("#screen3").html(msg);
+}
+
+function computerMove()
+{
+	status++;
+	
+}
+
+function youMove(i,j)
+{
+	 gm_2d[i][j]=1;	
+	 status++;
+}
+
+function play2d()
+{
+	var clicked=false;
+  	while  (whoHasWon== "#")
+	{
+     	if (computerPlaysNext)
+		{
+			console.log("Computer plays");
+			draw2d("C");
+		    computerMove();
+			computerPlaysNext=false;
+		}
+		else
+		{
+			console.log("you plays");
+			draw2d("Y");
+			while (!clicked)
+			{
+				console.log("click?");
+		 		$("#c1").click(function(){
+			   		alert("c1 was clicked.");
+			   		clicked = true;
+				});
+			}
+			computerPlaysNext=true;
+		}	
+	}
+}
+
+function heads()
+{
+	var msg="";
+	computerStarts= whoStarts();
+	
+	if (!computerStarts)
+	{
+		msg="Heads, you win ! ";
+	}
+	else
+	{
+		msg="Tails, you lose.";
+	}
+	msg+="<br/>You play "+XorO();
+	$("#screen2").html(msg);
+//	play2d();
+}
+
+function tails()
+{
+	var msg        = "";
+	computerStarts = whoStarts();
+	
+	if (computerStarts)
+	{
+		msg="Heads, you lose";
+	}
+	else
+	{
+		msg="Tails, you win";
+	}
+	msg+="<br/>You play "+XorO();
+	$("#screen2").html(msg);
+//	play2d()
+}
+</script>
+<div id='screen1'><button  type="button" onclick="oxo2()">Start</button></div>
+<div id='screen2'>
+Toss a Coin... 
+Heads <input type="radio"   name="coin" id="coin" value="H"   onclick="heads()" /> 
+Tails  <input type="radio" name="coin" id="coin" value="T"  onclick="tails()"  /> </div>
+<div id='screen3'></div>
+<div id='screen4'></div>
+
+</body>
+</html>
