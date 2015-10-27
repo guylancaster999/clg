@@ -5,7 +5,7 @@ $(document).ready(function()
 	 	{$("#photobutton").hide(); }
 	else
 		{ $("#photobutton").show(); }
-				
+		
 	if  (hrf.search("activities") == -1)
 	 	{$("#activitybutton").hide();	}
 	else

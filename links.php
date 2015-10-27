@@ -19,11 +19,11 @@ head("Links");
 						<li><a href="http://www.the-arthaus.co.uk/artfulsplodgers/index.html">Artful Splodgers</a> &ndash; art classes</li>
 						<li><a href="http://www.babiesinthecity.co.uk">Babies in the City</a></li>
 						<li><a href="http://www.babysensory.com">Baby Sensory</a>  &ndash;  Didsbury</li>
-						<li><a href="http://www.manchestersportandleisure.org/venue/chorlton-leisure-centre">Chorlton Leisure Centre</a> &ndash; Manchester Rd, Chorlton, Manchester</a></li>
-						<li><a href="http://www.crafteliciousuk.com/">Craftelicious</a> &ndash; Crafts on Oswald Road, Chorlton</a></li>
+		 				<li><a href="http://www.crafteliciousuk.com/">Craftelicious</a> &ndash; Crafts on Oswald Road, Chorlton</a></li>
 						<li><a href="http://www.creche-and-burn.co.uk">Cr&ecirc;che-and-burn</a> &ndash; parents and babies/toddlers/children park-based running sessions</li>
 						<li><a href="http://www.dayoutwiththekids.co.uk/search.php?county=Greater-Manchester">Family Days out in Greater Manchester</a></li>
 						<li><a href="http://www.grumpy.org.uk/">Greater Manchester Play Resource Unit (GRUMPY)</a></li>
+						<li><a href="http://www.better.org.uk/leisure/hough-end">Hough End Leisure Centre</a></li>
 						<li><a href="http://www.headoverheelsplay.co.uk">Head over Heels Play centre</a> &ndash;  Albany Rd, Chorlton, Manchester</a></li>
 						<li><a href="http://www.hulmegardencentre.org.uk/node/31">Hulme Community Garden Centre</a> &ndash; parents and todlers club,Rolls Crescent,Hulme, Manchester</li>
 						<li><A href="http://www.jumpnation.com">Jump Nation</a> &ndash; trampoline centre in the Trafford Centre. Includes an under 5's area, two huge foam pits and a caf&eacute; </li>

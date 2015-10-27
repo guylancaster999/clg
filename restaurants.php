@@ -20,6 +20,7 @@ head("Restaurants");
 						<li><a href="http://indiantiffinroom.com">Indian Tiffin Room</a> &ndash; [South Indian]  Cheadle</li>
 						<li><a href="http://jaipurpalacerestaurant.com/">Jaipur Palace</a>  &ndash; [Vegetarian] Wilmslow rd, between  Fallowfield and Withington</li>
 						<li><a href="https://www.facebook.com/realindianfood">Lilly's Vegetarian</a> &ndash; <span property="v:street-address">[South Indian Vegetarian] Oldham Road</span>, oposite ikea in Ashton-under-Lyne (on the Metro)</li>
+						<li><a href="http://www.nawaab.com/">Nawaab</a> - Levenshulme</li>
 						<li><a href="http://www.sindhoor.co.uk">Sindhoor</a> &ndash; [South Indian]  Burnage</li>
 						<li><a href="https://www.facebook.com/pages/This-That-Café-Ltd/444401702333248">This 'n That</a> &ndash;  [North Indian/Pakistani] Soap Street, Northern Quarter, Manchester</li>
 						<li><a href="http://www.zoukteabar.co.uk">Zouk</a>  &ndash; University area</li>

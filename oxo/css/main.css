@@ -1,5 +1,22 @@
-@charset "utf-8";
-/* CSS Document */
-
-body
-{font-family:Arial, Helvetica, sans-serif}
+BODY
+{
+	font-family:Arial, Helvetica, sans-serif;
+}
+.screen1
+{
+	position:absolute;
+	left:20px;
+	top:200px;
+}
+.screen2
+{
+	position:absolute;
+	left:200px;
+	top:200px;
+}
+.screen3
+{
+	position:absolute;
+	left:20px;
+	top:300px;
+}

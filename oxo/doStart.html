@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>oxo2</title>
+	<link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+    <h1 align='center'>2D Noughts and Crosses</h1>
+    <div id="screen1"></div>
+	<script>
+
+	var hr,l,coin,computerStarts,msg,url;
+
+	function seturl(mv,gm,moveNo,player)
+	{
+	var url='doPlay.html';
+	url+="?mv="+mv;
+	url+="&gm="+gm;
+	url+="&moveNo="+moveNo;
+	url+="&player="+player;
+	return url;
+	}
+   function whoStarts()
+   {
+	return (Math.random(1)>0.5) ? "C": "Y";
+   }
+   
+   hr	= window.location.href;
+   l	= hr.length;
+   coin	= hr.substr(l-1,1);
+   computerstarts=whoStarts();
+   
+   if (computerStarts=="C")
+	{
+		msg=(coin=="H") ?"Tails, you lose":"Heads, you lose";
+	}
+	else
+	{
+		msg=(coin=="H")?"Heads you win":"Tails, you win";
+	}
+	qt="'";
+	msg+="&nbsp;&nbsp;";
+ 	msg+='<input type="submit" value="Play" ';
+	msg+=' onclick="window.location.assign('+qt+seturl("x","000000000","0",computerstarts) + qt+')" />';
+	document.getElementById('screen1').innerHTML =msg;
+	   </script>
+	</body>
+</html>

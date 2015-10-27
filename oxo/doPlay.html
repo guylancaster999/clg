@@ -1,0 +1,151 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>oxo2</title>
+		<link rel="stylesheet" href="css/main.css"/>
+	</head>
+
+<body>
+    <h1 align='center'>2D Noughts and Crosses</h1>
+    <div id="screen1"></div>
+    <div id="screen2"></div>
+    <div id="screen3"></div>
+	<script>
+	var hr,msg,moveNoPos,playerPos,moveNo,player,x,mv,gm,computerPlays="X",youPlay="0";
+
+	function replaceAt(s,index, character)
+	{
+
+     	ret= s.substr(0, index) + character + s.substr(index + 1,s.length-index-1);
+
+		return ret;
+	}
+	function seturl(mv,gm,moveNo,player)
+	{
+		var url='doPlay.html';
+		url+="?mv="+mv;
+		url+="&gm="+gm;
+		url+="&moveNo="+moveNo;
+		url+="&player="+player;
+		return url;
+	}
+	function setscr(s,v)
+	{
+		document.getElementById(s).innerHTML = v;
+		return;
+	}
+	function youMove(i)
+	{
+	var url='"doPlay.html';
+	url+="?gm="+gm;
+	url+="&moveNo="+moveNo;
+	url+="&player=Y";
+	url+="&mv="+i+'"';
+	return "window.location.assign("+url+");";
+return;
+}
+function drawBox(i,who)
+{
+	var msg	= "",c;
+	c = gm.substr(i,1);
+
+	switch(c)
+	{
+		case "0":
+		if (who == "C")
+		{
+			msg+="&nbsp;&nbsp;&nbsp;&nbsp;";
+		}
+		else
+		{
+			msg+="&nbsp;<input type='button' height='20' onclick='"+youMove(i)+"' value='Move'>&nbsp;";
+		}
+		break;
+
+		case "Y":
+		msg+=youPlay;
+		break;
+
+		case "C":
+		msg += computerPlays;
+		break;
+
+		default:
+   	    msg+=" ";
+	}
+return msg;
+}
+function draw2D(who)
+{
+	var msg="<table>";
+	msg+="<tr><th id='c1'>"+drawBox(0,who)+"</th><th>|</th><th>"+drawBox(1,who)+"</th><th>|</th><th>"+drawBox(2,who)+"</th></tr>";
+	msg+="<tr><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th></tr>";
+ 	msg+="<tr><th>"+drawBox(3,who)+"</th><th>|</th><th>"+drawBox(4,who)+"</th><th>|</th><th>"+drawBox(5,who)+"</th></tr>";
+	msg+="<tr><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th></tr>";
+	msg+="<tr><th>"+drawBox(6,who)+"</th><th>|</th><th>"+drawBox(7,who)+"</th><th>|</th><th>"+drawBox(8,who)+"</th></tr>";
+	msg+="</table>";
+	setscr("screen1",msg);
+}
+  //get last state
+   hr       = window.location.href;
+   msg      = hr;
+   moveNoPos= hr.search('moveNo=');
+   playerPos= hr.search('player=');
+   gmPos	= hr.search('gm=');
+   mvPos    = hr.search('mv=');
+   moveNo   = hr.charAt(moveNoPos+7);
+   player   = hr.charAt(playerPos+7);
+   gm		= hr.substr(gmPos+3,9);
+   mv 		= hr.charAt(mvPos+3);
+   msg+=" moveNo="+moveNo;
+   msg+=" player="+player;
+   msg+=" gm="+gm;
+   msg+= " mv="+mv;
+   setscr("screen3",msg);
+
+  if ((player=="Y") && (mv !="x")) //you play and not first move
+   {
+		gm = replaceAt(gm,mv,"Y");
+		draw2D("Y");
+		player="C";
+   }
+   if (player=="C")
+   {
+   if (moveNo==0)
+   {
+	x = Math.random(1);
+	if (x<0.2)
+	{
+		mv = 4;
+	}
+	else if (x<0.4)
+	{
+		mv = 0;
+	}
+	else if (x<0.6)
+	{
+		mv = 2;
+	}
+	else if (x<0.8)
+	{
+		mv = 6;
+	}
+	else
+	{
+		mv = 8;
+	}
+  }
+  else
+	{
+	//calc move >0
+	}
+	moveNo++;
+	player="U";
+  }
+  // draw game
+  draw2D("Y");
+   </script>
+  </body>
+  </html>

@@ -72,8 +72,7 @@ head("Policies");
 						&nbsp;<?php photo("outdoor61.jpg","outdoor61_small.jpg","Photo 59",120,"Outdoor Photographs","outdoors.php");?>
 						&nbsp;<?php photo("outdoor62.jpg","outdoor62_small.jpg","Photo 60",120,"Outdoor Photographs","outdoors.php");?> 
 						<div align="center">Click on thumbnails to see larger images</div>
-						>
-				  	 		<?php foot();?>
+						 	 		<?php foot();?>
                     </div>
                  </div>
             </div>
