@@ -1,0 +1,25 @@
+<html>
+<head>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    function hide(x)
+    {
+      document.getElementById(x).style.visibility = 'hidden';
+      return;
+  }
+  function show(x)
+  {
+    document.getElementById(x).style.visibility = 'visible';
+    return;
+  }
+ hide ("#id1");
+ </script>
+
+<a onclick="show('#id1')">Show</a>
+<div id="id1">11111111111111111111111111111111111111111111111111
+    <a onclick="hide('#id1');">X</a>
+</div>
+</body>
+</html>

@@ -18,11 +18,13 @@ head("Links");
 						<li><a href="http://www.adventurebabies.co.uk">Adventure Babies</a> - South Manchester classes and parties</li>
 						<li><a href="http://www.the-arthaus.co.uk/artfulsplodgers/index.html">Artful Splodgers</a> &ndash; art classes</li>
 						<li><a href="http://www.babiesinthecity.co.uk">Babies in the City</a></li>
+						<li><a href="http://www.babelbabies.com/">Babel Babies</a> - Chorlton</a></li>
 						<li><a href="http://www.babysensory.com">Baby Sensory</a>  &ndash;  Didsbury</li>
 		 				<li><a href="http://www.crafteliciousuk.com/">Craftelicious</a> &ndash; Crafts on Oswald Road, Chorlton</a></li>
-						<li><a href="http://www.creche-and-burn.co.uk">Cr&ecirc;che-and-burn</a> &ndash; parents and babies/toddlers/children park-based running sessions</li>
+ 
 						<li><a href="http://www.dayoutwiththekids.co.uk/search.php?county=Greater-Manchester">Family Days out in Greater Manchester</a></li>
 						<li><a href="http://www.grumpy.org.uk/">Greater Manchester Play Resource Unit (GRUMPY)</a></li>
+						<li><a href="http://www.lagrenouillebleue.co.uk/">la Grenouille Bleue</a> - French for Toddlers</li>
 						<li><a href="http://www.better.org.uk/leisure/hough-end">Hough End Leisure Centre</a></li>
 						<li><a href="http://www.headoverheelsplay.co.uk">Head over Heels Play centre</a> &ndash;  Albany Rd, Chorlton, Manchester</a></li>
 						<li><a href="http://www.hulmegardencentre.org.uk/node/31">Hulme Community Garden Centre</a> &ndash; parents and todlers club,Rolls Crescent,Hulme, Manchester</li>
@@ -63,6 +65,7 @@ head("Links");
 						<li><a href="http://www.netmums.com/manchester/childcare">Netmums</a></li>
 						 <li><a href="http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/CARE/EY432868">Office for Standards in Education, Children's Services and Skills (Ofsted)</a></li>
 						<li><a href="http://www.pacey.org.uk/">Professional Association for Childcare and Early Years (PACEY)</a>  &ndash;  formerly National Childminding Association (NCMA) </li>
+						<li><A href="http://www.singleparents.org.uk/">Single Parents</a></li>
 						<li><a href="http://www.woodcraft.org.uk/">Woodcraft Folk</a></li>
 						</ul>
   			 		<?php foot();?>
@@ -75,5 +78,4 @@ head("Links");
     <!-- /#wrapper -->
         <?php foot2();?>
 </body>
-</html>
-  
+</html>  

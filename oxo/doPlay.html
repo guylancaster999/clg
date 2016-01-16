@@ -1,4 +1,5 @@
-	<!DOCTYPE html>
+	<!DOCTYPE ht+++++++++++++++++++++++++++++++++++
+	ml>
 	<html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -17,10 +18,19 @@
 
 	function replaceAt(s,index, character)
 	{
-
-     	ret= s.substr(0, index) + character + s.substr(index + 1,s.length-index-1);
-
-		return ret;
+        $ret="";
+		for (i=0;i<9;i++)
+		{
+			if (i==index)
+			{
+				ret+=character;
+			}
+			else
+			{
+				ret+=s.substr(i,1);
+			}
+		}
+     	return ret;
 	}
 	function seturl(mv,gm,moveNo,player)
 	{
@@ -81,9 +91,13 @@ function draw2D(who)
 {
 	var msg="<table>";
 	msg+="<tr><th id='c1'>"+drawBox(0,who)+"</th><th>|</th><th>"+drawBox(1,who)+"</th><th>|</th><th>"+drawBox(2,who)+"</th></tr>";
+	
 	msg+="<tr><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th></tr>";
- 	msg+="<tr><th>"+drawBox(3,who)+"</th><th>|</th><th>"+drawBox(4,who)+"</th><th>|</th><th>"+drawBox(5,who)+"</th></tr>";
+ 	
+	msg+="<tr><th>"+drawBox(3,who)+"</th><th>|</th><th>"+drawBox(4,who)+"</th><th>|</th><th>"+drawBox(5,who)+"</th></tr>";
+	
 	msg+="<tr><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th><th>+</th><th>&ndash;&ndash;</th></tr>";
+	
 	msg+="<tr><th>"+drawBox(6,who)+"</th><th>|</th><th>"+drawBox(7,who)+"</th><th>|</th><th>"+drawBox(8,who)+"</th></tr>";
 	msg+="</table>";
 	setscr("screen1",msg);
@@ -107,7 +121,7 @@ function draw2D(who)
 
   if ((player=="Y") && (mv !="x")) //you play and not first move
    {
-		gm = replaceAt(gm,mv,"Y");
+		gm = replaceAt (  gm,mv,"Y");
 		draw2D("Y");
 		player="C";
    }

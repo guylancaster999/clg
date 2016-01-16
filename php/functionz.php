@@ -1,9 +1,7 @@
 <?php
 function banner($ttl)
 {
-	print '
-		<a id="top" name="top"></a>
-		<h1>
+	print '<h1>
 			Chorlton Little Gems Childminders 
 			
 			<a href="#menu-toggle" class="btn btn-default  rt" id="menu-toggle" title="Menu Toggle">
@@ -16,7 +14,7 @@ function banner($ttl)
 function menu()
 {
 	print 
-	'	<br/> 
+		'<br/><a name="top" id="top"></a>
 		<img src="images/diamondz.jpg" alt="chorlton Little Gems Child-Minders" width="120px"/>
        <br/> <br/>
 		<div class="menu"><a href="index.php" title="Chorlton Little Gems Homepage">Homepage</a></div>
@@ -39,22 +37,22 @@ function head($ttl)
 {
 print '<!DOCTYPE html>
 	<html lang="en">
-	<head>
-		<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-       <meta name="rating" content="general" />
-<meta name="revisit-after" content="90 Days" />
-<meta name="expires" content="never" /> 
-<meta name="robots" content="index" />
-<meta name="keywords" content="Manchester, baby, Chorlton, Childminder,South Manchester, Whalley Range, Stretford , Tot, Childcare,'.$ttl.'"/>
-<meta name="description" content="Manchester Chorlton Childminder - "'.$ttl.'/>
- <meta name="author" content="Guy Lancaster">
-    <title>Chorlton Little Gems Childminders - '.$ttl.'</title>
-	 <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css"/>
-</head>';
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="rating" content="general" />
+			<meta name="revisit-after" content="90 Days" />
+			<meta name="expires" content="never" /> 
+			<meta name="robots" content="index" />
+			<meta name="keywords" content="Manchester, baby, Chorlton, Childminder,South Manchester, Whalley Range, Stretford, Tot, Minder,Toddler, Childcare,'.$ttl.'"/>
+			<meta name="description" content="Manchester Chorlton Childminder - "'.$ttl.'/>
+			<meta name="author" content="Guy Lancaster">
+			<title>Chorlton Little Gems Childminders - '.$ttl.'</title>
+			 <!-- Bootstrap Core CSS -->
+			<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		   <link rel="stylesheet" href="css/main.css"/>
+	</head>';
 return;
 }
 function foot()

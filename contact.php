@@ -1,4 +1,4 @@
-<?php 
+<?php
 require "php/functionz.php";
 head("Contact");
 ?>
@@ -11,7 +11,7 @@ head("Contact");
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-               
+
                     <div class="col-lg-10">
                         <?php banner("Contact");?>
 						  <table border="0">
@@ -23,7 +23,8 @@ head("Contact");
 						</tr>
 						<tr>
 						<td valign="top">Phone:</td>
-						<td valign="top">07891953841<br/><br/></td>
+						<td valign="top"><a href="tel:+447891953841">07891953841</a>
+              <br/><br/></td>
 						</tr>
 						<tr><td>&nbsp;</td></tr>
 						<tr>
@@ -43,7 +44,7 @@ head("Contact");
 						<br/>
 						<?php foot();?>
                     </div>
-                
+
                 </div>
             </div>
         </div>
